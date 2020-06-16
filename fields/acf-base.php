@@ -97,9 +97,12 @@ class acf_field_svg_icon extends acf_field {
 	 */
 	public function get_all_svg_files() {
 		// First try to load files list from the cache.
-		$files = get_transient( $this->cache_key );
-		if ( ! empty( $files ) ) {
-			return $files;
+		$envIsProd = WP_ENV == 'production' ?? true;
+		if ( $envIsProd ) {
+			$files = get_transient( $this->cache_key );
+			if ( ! empty( $files ) ) {
+				return $files;
+			}
 		}
 
 		/**
