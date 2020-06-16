@@ -14,7 +14,7 @@ This ACF field type is compatible with:
 
 ### via Composer
 
-1. Add a line to your repositories array: `{ "type": "git", "url": "https://github.com/BeAPI/acf-svg-icon" }`
+1. Add a line to your repositories array: `{ "type": "git", "url": "https://github.com/benlbot/acf-svg-icon" }`
 2. Add a line to your require block: `"bea/acf-svg-icon": "dev-master"`
 3. Run: `composer update`
 
